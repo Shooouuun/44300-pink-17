@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Sergey Kolgaev](https://up.htmlacademy.ru/adaptive/17/user/44300).
-* Наставник: `Неизвестно`.
+* Наставник: `Без наставника`.
 
 ---
 
