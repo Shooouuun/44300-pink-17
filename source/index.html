@@ -1,12 +1,137 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Пинк</title>
+  <meta name="keywords" content="Поднимает настроение, Меняет мир вокруг, Заводит новых друзей">
+  <meta name="description" content="Сайт фотоприложения для раскрашивания серых будней">
+</head>
+<body class="index-page">
+<header class="page-header">
+  <nav class="page-header__navigation" aria-label="Основная навигация">
+    <div class="page-header__logotype-wrap">
+      <a class="page-header__logotype">
+        <img src="http://placehold.it/150x100" alt="Логотип Pink">
+      </a>
+    </div>
+    <!--header__trigger-nojs для переключателя без JS-->
+    <button class="page-header__trigger page-header__trigger--nojs" type="button" title="Переключатель открытия/закрытия навигации">
+      <span class="page-header__trigger-name">Навигация</span>
+    </button>
+    <!--page-header__list-open для навигации без JS-->
+    <ul class="page-header__list page-header__list--nojs">
+      <li class="page-header__item"><a class="page-header__link page-header__link--active" href="#">главная</a></li>
+      <li class="page-header__item"><a class="page-header__link" href="photo.html">фотографии</a></li>
+      <li class="page-header__item"><a class="page-header__link" href="form.html">конкурс</a></li>
+      <li class="page-header__item"><a class="page-header__link" href="https://htmlacademy.ru/">html academy</a></li>
+    </ul>
+  </nav>
+  <section class="page-header__intro intro">
+    <div class="intro__wrap">
+      <h1 class="intro__title intro__title--index intro__title--toggle">взгляните на жизнь иначе!</h1>
+      <a class="intro__btn btn" href="#">скачать приложение</a>
+      <ul class="intro__list">
+        <li class="intro__item">
+          <a class="intro__icon intro__icon--apple" href="#">скачать приложение для Mac OS</a>
+        </li>
+        <li class="intro__item">
+          <a class="intro__icon intro__icon--android" href="#">скачать приложение для Android</a>
+        </li>
+        <li class="intro__item">
+          <a class="intro__icon intro__icon--windows" href="#">скачать приложение для Windows</a>
+        </li>
+      </ul>
+      <p class="intro__description">доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    </div>
+  </section>
+</header>
+<main class="page-main">
+  <section class="about">
+    <div class="about__title-wrap">
+      <h2 class="about__slogan">Устали от серости мегаполиса?</h2>
+      <h2 class="about__slogan about__slogan--small">Нам есть, что вам предложить!</h2>
+    </div>
+    <ul class="about__list">
+      <li class="about__item">
+        <picture class="about__product">
+          <img class="about__img" src="#" alt="Изображение поднимает настроение">
+        </picture>
+        <h3 class="about__item-title">поднимает настроение</h3>
+        <p class="about__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+      </li>
+      <li class="about__item">
+        <picture class="about__product">
+          <img class="about__img" src="#" alt="Изображение поднимает настроение">
+        </picture>
+        <h3 class="about__item-title">меняет мир вокруг</h3>
+        <p class="about__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      </li>
+      <li class="about__item">
+        <picture class="about__product">
+          <img class="about__img" src="#" alt="Изображение поднимает настроение">
+        </picture>
+        <h3 class="about__item-title">заводит новых друзей</h3>
+        <p class="about__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+      </li>
+    </ul>
+    <div class="about__research">
+      <svg class="about__icon" width="35" height="50" viewBox="2 0 67 101">
+        <use xlink:href="img/sprite.svg#icon"></use>
+      </svg>
+      <h2 class="about__research-title">Эффект на&nbsp;24&nbsp;часа!</h2>
+      <p class="about__research-text">
+        Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от использования приложения длится&nbsp;целые&nbsp;сутки!
+      </p>
+      <a class="about__research-link" href="#">Узнать больше об исследовании</a>
+    </div>
+  </section>
+</main>
+<footer class="page-footer">
+  <section class="page-footer__wrapper">
+    <h2 class="visually-hidden">Социальные сети</h2>
+    <div class="page-footer__column">
+      <a class="page-footer__link" href="#">
+        <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Pink">
+      </a>
+    </div>
+    <div class="page-footer__column social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link" href="https://twitter.com">
+            <svg class="social__icon social__twitter" width="22" height="12">
+              <use xlink:href="img/sprite.svg#icon-twitter-mobile"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Твиттере</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://facebook.com">
+            <svg class="social__icon social__facebook" width="10" height="19">
+              <use xlink:href="img/sprite.svg#icon-fb-mobile"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.youtube.com">
+            <svg class="social__icon social__instagram" width="16" height="16">
+              <use xlink:href="img/sprite.svg#icon-youtube-mobile"></use>
+            </svg>
+            <span class="visually-hidden">Мы на Ютубе</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__column copyright">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <p class="copyright__text">HTML Academy</p>
+        <svg class="copyright__image" width="40" height="40">
+          <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+        </svg>
+      </a>
+    </div>
+  </section>
+</footer>
+</body>
 </html>
