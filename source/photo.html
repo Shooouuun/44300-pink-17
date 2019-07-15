@@ -35,10 +35,12 @@
 </header>
 <main class="page-main">
   <section class="photo-section">
-    <h2 class="photo-section__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+    <div class="photo-section__title-wrap">
+      <h2 class="photo-section__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+    </div>
     <article class="photo-section__user-photo photo-section__user-photo--of-the-day">
       <picture class="photo-section__image photo-section__image--of-the-day">
-        <p class="photo-section__view-of-the-day">панорама дня</p> <!-- будет реализовано псевдоэлементов, content: 'панорама дня'; -->
+        <!-- <p class="photo-section__view-of-the-day">панорама дня</p> будет реализовано псевдоэлементов, content: 'панорама дня'; -->
         <img class="photo-section__img" src="#" alt="Фотография панорамы дня">
       </picture>
       <div class="photo-section__caption photo-section__caption--wrapper">
@@ -86,6 +88,7 @@
           <div class="photo-section__caption photo-section__caption--wrapper">
             <h3 class="photo-section__post-autor">Борис<span>(20 часов назад)</span></h3>
             <p class="photo-section__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <div class="photo-section__post-likes">
               <svg class="photo-section__icon" width="12" height="12">
                 <use xlink:href="img/sprite.svg#icon"></use>
               </svg>
@@ -140,6 +143,12 @@
         </li>
       </ul>
     </section>
+  </section>
+  <section class="post-photo">
+    <div class="post-section__title-wrap">
+      <h2 class="post-section__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+    </div>
+    div
   </section>
 </main>
 <footer class="page-footer">
