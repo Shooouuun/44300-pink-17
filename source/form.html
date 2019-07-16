@@ -21,19 +21,111 @@
     </button>
     <!--page-header__list-open для навигации без JS-->
     <ul class="page-header__list page-header__list--nojs">
-      <li class="page-header__item"><a class="page-header__link" href="#">главная</a></li>
+      <li class="page-header__item"><a class="page-header__link" href="index.html">главная</a></li>
       <li class="page-header__item"><a class="page-header__link" href="photo.html">фотографии</a></li>
       <li class="page-header__item"><a class="page-header__link page-header__link--active" href="#">конкурс</a></li>
-      <li class="page-header__item"><a class="page-header__link" href="https://htmlacademy.ru/">html academy</a></li>
+      <li class="page-header__item"><a class="page-header__link" href="https://htmlacademy.ru/" target="_blank">html academy</a></li>
     </ul>
   </nav>
-  <section class="page-header__intro intro">
-    <div class="intro__wrap">
-      <h1 class="intro__title intro__title--index intro__title--toggle">конкурс на самое безбашеное путешествие с Пинк</h1>
-    </div>
-  </section>
 </header>
 <main class="page-main">
+  <section class="feedback">
+    <header class="feedback__intro">
+      <h1 class="feedback__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    </header>
+    <h2 class="feedback__subtitle">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></h2>
+    <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+
+      <ul class="feedback__info form-info form-info--name">
+        <li class="form-info__item form-info__item--name">
+          <label class="form-info__label form-info__label--name" for="field-surname">Фамилия:</label>
+          <input class="form-info__input" id="field-surname" type="text" name="surname" value="" placeholder="Укажите фамилию *">
+        </li>
+        <li class="form-info__item form-info__item--name">
+          <label class="form-info__label form-info__label--name" for="field-username">Имя:</label>
+          <input class="form-info__input" id="field-username" type="text" name="username" value="" placeholder="Введите ваше имя *">
+        </li>
+        <li class="form-info__item form-info__item--name">
+          <label class="form-info__label form-info__label--name" for="field-patronymic">Отчество:</label>
+          <input class="form-info__input" id="field-patronymic" type="text" name="patronymic" value="" placeholder="Ну и отчество тоже">
+        </li>
+      </ul>
+
+      <fieldset class="feedback__report form-report form-report--progress">
+        <legend class="form-report__caption">Ваши безбашенные достижения в путешествии</legend>
+          <ul class="form-report__list form-report__list--progress">
+            <li class="form-report__item form-report__item--progress">
+              <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-shark" type="checkbox" name="with-a-shark" checked>
+              <label class="form-report__label form-report__label--progress" for="field-shark">Сделал селфи с акулой</label>
+            </li>
+            <li class="form-report__item form-report__item--progress">
+              <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-beach" type="checkbox" name="on-the-beach" checked>
+              <label class="form-report__label form-report__label--progress" for="field-beach">Обгорел на пляже</label>
+            </li>
+            <li class="form-report__item form-report__item--progress">
+              <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-star" type="checkbox" name="saw-the-star">
+              <label class="form-report__label form-report__label--progress" for="field-star">Видел Чака Норриса</label>
+            </li>
+            <li class="form-report__item form-report__item--progress">
+              <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-souvenirs" type="checkbox" name="souvenirs">
+              <label class="form-report__label form-report__label--progress" for="field-souvenirs">Накупил сувениров</label>
+            </li>
+            <li class="form-report__item form-report__item--progress">
+              <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-tower" type="checkbox" name="kept-tower" checked>
+              <label class="form-report__label form-report__label--progress" for="field-tower">Удержал башню</label>
+            </li>
+            <li class="form-report__item form-report__item--progress">
+              <input class="visually-hidden form-report__input form-report__input--checkbox" id="field-hotel" type="checkbox" name="defeated-hotel">
+              <label class="form-report__label form-report__label--progress" for="field-hotel">Разгромил отель</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="feedback__info form-info form-info--contact">
+          <legend class="form-info__caption">Контактная информация</legend>
+          <ul class="form-info__list">
+            <li class="form-info__item form-info__item--contact">
+              <label class="form-info__label form-info__label--contact" for="field-phone">Номер телефона</label>
+              <input class="form-info__input form-info__input--contact" id="field-phone" type="tel" name="phone" value="" placeholder="Номер, пожалуйста">
+            </li>
+            <li class="form-info__item form-info__item--contact">
+              <label class="form-info__label form-info__label--contact" for="field-email">Адрес почты</label>
+              <input class="form-info__input form-info__input--contact" id="field-email" type="email" name="email" value="" placeholder="Введите почту *">
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="feedback__report form-report form-report--application">
+          <legend class="form-report__caption form-report__caption--application">С каким приложением путешествовали?</legend>
+          <ul class="form-report__list">
+            <li class="form-report__item form-report__item--application">
+              <input class="visually-hidden form-report__input form-report__input--radio" id="field-ios" type="radio" name="application" value="for-ios" checked>
+              <label class="form-report__label" for="field-ios">Pink для iOS</label>
+            </li>
+            <li class="form-report__item form-report__item--application">
+              <input class="visually-hidden form-report__input form-report__input--radio" id="field-android" type="radio" name="application" value="for-android">
+              <label class="form-report__label" for="field-android">Pink на Android</label>
+            </li>
+            <li class="form-report__item form-report__item--application">
+              <input class="visually-hidden form-report__input form-report__input--radio" id="field-windows-phone" type="radio" name="application" value="windows-phone">
+              <label class="form-report__label" for="field-windows-phone">Windows Phone</label>
+            </li>
+          </ul>
+        </fieldset>
+
+          <fieldset class="feedback__message form-message">
+            <legend class="form-message__caption">Опишите свои эмоции</legend>
+            <label for="field-message"></label>
+            <textarea class="form-message__text" id="field-message" name="message">Можно прям в красках, не стесняясь в выражениях</textarea>
+          </fieldset>
+
+          <div class="feedback__post">
+            <!-- feedback__button — класс для кнопки, клик по которой отправляет форму показывает модальное окно -->
+            <button class="feedback__button" type="submit">Отправить форму</button>
+            <p class="feedback__necessary"><sup>*</sup> — обязательные <span>для заполнения</span> поля</p>
+          </div>
+        </form>
+      </section>
 </main>
 <footer class="page-footer">
   <section class="page-footer__wrapper">
@@ -46,7 +138,7 @@
     <div class="page-footer__column social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link" href="https://twitter.com">
+          <a class="social__link" href="https://twitter.com" target="_blank">
             <svg class="social__icon social__twitter" width="22" height="12">
               <use xlink:href="img/sprite.svg#icon-twitter-mobile"></use>
             </svg>
@@ -54,7 +146,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="https://facebook.com">
+          <a class="social__link" href="https://facebook.com" target="_blank">
             <svg class="social__icon social__facebook" width="10" height="19">
               <use xlink:href="img/sprite.svg#icon-fb-mobile"></use>
             </svg>
@@ -62,7 +154,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="https://www.youtube.com">
+          <a class="social__link" href="https://www.youtube.com" target="_blank">
             <svg class="social__icon social__instagram" width="16" height="16">
               <use xlink:href="img/sprite.svg#icon-youtube-mobile"></use>
             </svg>
@@ -72,7 +164,7 @@
       </ul>
     </div>
     <div class="page-footer__column copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <p class="copyright__text">HTML Academy</p>
         <svg class="copyright__image" width="40" height="40">
           <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
