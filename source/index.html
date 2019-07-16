@@ -24,7 +24,7 @@
       <li class="page-header__item"><a class="page-header__link page-header__link--active" href="#">главная</a></li>
       <li class="page-header__item"><a class="page-header__link" href="photo.html">фотографии</a></li>
       <li class="page-header__item"><a class="page-header__link" href="form.html">конкурс</a></li>
-      <li class="page-header__item"><a class="page-header__link" href="https://htmlacademy.ru/">html academy</a></li>
+      <li class="page-header__item"><a class="page-header__link" href="https://htmlacademy.ru/" target="_blank">html academy</a></li>
     </ul>
   </nav>
   <section class="page-header__intro intro">
@@ -86,8 +86,132 @@
       <a class="about__research-link" href="#">Узнать больше об исследовании</a>
     </div>
   </section>
+  <section class="reviews slider">
+    <h2 class="reviews__title visually-hidden">Отзывы о приложении</h2>
+    <input class="visually-hidden slider__1" type="radio" id="review-1" name="review-toggle" checked>
+    <input class="visually-hidden slider__2" type="radio" id="review-2" name="review-toggle">
+    <input class="visually-hidden slider__3" type="radio" id="review-3" name="review-toggle">
+    <div class="reviews__toggles slider__toggles">
+      <label class="slider__toggle-1" for="review-1"></label>
+      <label class="slider__toggle-2" for="review-2"></label>
+      <label class="slider__toggle-3" for="review-3"></label>
+    </div>
+    <ul class="reviews__list slider__list">
+      <li class="reviews__item slider__item">
+        <cite class="reviews__author">Николай Петров</cite>
+        <p class="reviews__description">25 лет, водитель трамвая</p>
+        <q class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+        </q>
+      </li>
+      <li class="reviews__item slider__item">
+        <cite class="reviews__author">Владислав Петров</cite>
+        <p class="reviews__description">25 лет, водитель трамвая</p>
+        <q class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+        </q>
+      </li>
+      <li class="reviews__item slider__item">
+        <cite class="reviews__author">Борис Петров</cite>
+        <p class="reviews__description">25 лет, водитель трамвая</p>
+        <q class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+        </q>
+      </li>
+    </ul>
+    <div class="reviews__toggle">
+      <button class="reviews__button reviews__button--prev" type="button">Предыдущий отзыв</button>
+      <button class="reviews__button reviews__button--next" type="button">Следующий отзыв</button>
+    </div>
+  </section>
+  <section class="price">
+    <h2 class="price__title visually-hidden">Выбор тарифного плана приложения</h2>
+    <div class="price__wrap slider">
+      <input class="visually-hidden slider__1 slider__1--price" type="radio" id="price-1" name="price-toggle">
+      <input class="visually-hidden slider__2 slider__2--price" type="radio" id="price-2" name="price-toggle" checked>
+      <input class="visually-hidden slider__3 slider__3--price" type="radio" id="price-3" name="price-toggle">
+      <div class="price__toggles slider__toggles">
+        <label class="slider__toggle-1" for="price-1"></label>
+        <label class="slider__toggle-2" for="price-2"></label>
+        <label class="slider__toggle-3" for="price-3"></label>
+      </div>
+      <table class="price__list slider__list">
+        <tr>
+          <th class="price__item"></th>
+          <th class="price__item">
+            <p class="price__name">База</p>
+            <p class="price__price">1,99 USD</p>
+          </th>
+          <th class="price__item">
+            <p class="price__name">Стандарт</p>
+            <p class="price__price">3,99 USD</p>
+          </th>
+          <th class="price__item">
+            <p class="price__name">Анлим</p>
+            <p class="price__price">9,99 USD</p>
+          </th>
+        </tr>
+        <tr class="price__filter">
+          <td class="price__option">Розовый фильтр</td>
+          <td class="price__option">
+            <span>Розовый фильтр</span>
+          </td>
+          <td class="price__option">
+            <span>Розовый фильтр</span>
+          </td>
+          <td class="price__option">
+            <span>Розовый фильтр</span>
+          </td>
+        </tr>
+        <tr class="price__smiley">
+          <td class="price__option">Смайлики</td>
+          <td class="price__option">
+            <span>Смайлики</span>
+          </td>
+          <td class="price__option">
+            <span>Смайлики</span>
+          </td>
+          <td class="price__option">
+            <span>Смайлики</span>
+          </td>
+        </tr>
+        <tr class="price__comments">
+          <td class="price__option">Комментарии</td>
+          <td class="price__option">
+            <span>Комментарии</span>
+          </td>
+          <td class="price__option">
+            <span>Комментарии</span>
+          </td>
+          <td class="price__option">
+            <span>Комментарии</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <section class="contacts">
+    <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
+    <ul class="contacts__list">
+      <li class="contacts__item">
+        <p class="contacts__text">Звоните:</p>
+        <a class="contacts__tel" href="tel:+78001000900" itemprop="telephone">8 (800) 1000 900</a>
+      </li>
+      <li class="contacts__item">
+        <p class="contacts__text">Звоните:</p>
+        <a class="contacts__email contacts__email" href="mailto:hello@pinkapp.ru" itemprop="email">hello@pinkapp.ru</a>
+      </li>
+      <li class="contacts__item">
+        <p class="contacts__text">Приезжайте в гости:</p>
+        <address class="contacts__address" itemprop="address">Санкт-Петербург, Невский проспект, д. 20</address>
+      </li>
+    </ul>
+    <div class="contacts__maps">
+      <img src="http://placehold.it/150x100" alt="Карта">
+    </div>
+  </section>
 </main>
-<footer class="page-footer">
+<footer class="page-footer page-footer--state">
   <section class="page-footer__wrapper">
     <h2 class="visually-hidden">Социальные сети</h2>
     <div class="page-footer__column">
@@ -98,7 +222,7 @@
     <div class="page-footer__column social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link" href="https://twitter.com">
+          <a class="social__link" href="https://twitter.com" target="_blank">
             <svg class="social__icon social__twitter" width="22" height="12">
               <use xlink:href="img/sprite.svg#icon-twitter-mobile"></use>
             </svg>
@@ -106,7 +230,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="https://facebook.com">
+          <a class="social__link" href="https://facebook.com" target="_blank">
             <svg class="social__icon social__facebook" width="10" height="19">
               <use xlink:href="img/sprite.svg#icon-fb-mobile"></use>
             </svg>
@@ -114,7 +238,7 @@
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="https://www.youtube.com">
+          <a class="social__link" href="https://www.youtube.com" target="_blank">
             <svg class="social__icon social__instagram" width="16" height="16">
               <use xlink:href="img/sprite.svg#icon-youtube-mobile"></use>
             </svg>
@@ -124,7 +248,7 @@
       </ul>
     </div>
     <div class="page-footer__column copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <p class="copyright__text">HTML Academy</p>
         <svg class="copyright__image" width="40" height="40">
           <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
