@@ -1,0 +1,125 @@
+.page-header {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.page-header__navigation {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  padding: 22px 20px 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  &--full {
+    position: relative;
+    background-color: #283645;
+  }
+}
+
+.page-header__logotype {
+  padding-bottom: 14px;
+}
+
+.page-header__trigger {
+  position: relative;
+  background-color: inherit;
+  width: 50px;
+  height: 24px;
+  margin-top: -1px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.page-header__trigger-name {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 0;
+  background: @white;
+  width: 100%;
+  height: 4px;
+  transition: 0.3s;
+  font-size: 0;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 0;
+    background: @white;
+    width: 100%;
+    height: 4px;
+    transform-origin: 50% 50%;
+    transition: 0.3s 0.3s, transform 0.3s;
+  }
+
+  &::before {
+    top: 10px;
+  }
+
+  &::after {
+    top: -10px;
+  }
+}
+
+.page-header__trigger--close {
+  width: 24px;
+
+  .page-header__trigger-name {
+    background: transparent;
+
+    &::before,
+    &::after {
+      transform: rotate3d(0, 0, 1, 45deg);
+      transition: 0.3s, transform 0.3s 0.3s;
+      top: 0;
+    }
+
+    &::before {
+      transform: rotate3d(0, 0, 1, -45deg);
+    }
+  }
+}
+
+.page-header__list {
+  display: none;
+  flex-flow: column wrap;
+  width: 100%;
+  margin-top: 5px;
+
+  &--nojs {
+    display: flex;
+  }
+
+  &--open {
+    display: flex;
+  }
+}
+
+.page-header__item {
+  box-shadow: 0 -1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  text-align: center;
+  padding: 16px 0;
+  margin: 0 -20px;
+
+  &:last-child {
+    box-shadow: 0 -1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 #000000;
+  }
+}
+
+.page-header__link {
+  font-size: 18px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: white;
+  font-family: @font-bold;
+}
