@@ -36,6 +36,25 @@
   &--nojs {
     display: none;
   }
+
+  &--open {
+    width: 24px;
+
+    .page-header__trigger-name {
+      background: transparent;
+
+      &::before,
+      &::after {
+        transform: rotate3d(0, 0, 1, 45deg);
+        transition: 0.3s, transform 0.3s 0.3s;
+        top: 0;
+      }
+
+      &::before {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
 }
 
 .page-header__trigger-name {
@@ -68,25 +87,6 @@
 
   &::after {
     top: -10px;
-  }
-}
-
-.page-header__trigger--close {
-  width: 24px;
-
-  .page-header__trigger-name {
-    background: transparent;
-
-    &::before,
-    &::after {
-      transform: rotate3d(0, 0, 1, 45deg);
-      transition: 0.3s, transform 0.3s 0.3s;
-      top: 0;
-    }
-
-    &::before {
-      transform: rotate3d(0, 0, 1, -45deg);
-    }
   }
 }
 
