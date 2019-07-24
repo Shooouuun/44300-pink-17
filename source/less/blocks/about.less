@@ -8,17 +8,7 @@
   display: flex;
   flex-flow: column wrap;
   text-align: center;
-  padding: 42px 0 64px;
-
-  &::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0;
-    border-right: 100vw solid #f2f2f2;
-    border-top: 10vw solid transparent;
-    z-index: -1;
-  }
+  padding: 42px 0 32px;
 }
 
 .about__title {
@@ -39,23 +29,32 @@
   display: flex;
   flex-flow: column wrap;
   background-color: #f2f2f2;
-  padding: 50px 30px 0;
+  padding: 81px 30px 0;
   text-align: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    border-left: 100vw solid #ffffff;
+    border-bottom: 10vw solid transparent;
+  }
 
   &::after {
     display: block;
     content: "";
-    height: 277px;
+    height: 278px;
     background: url("../img/iphone-screen-mobile@1x.png") 50% 0 no-repeat;
     background-size: 157px auto;
   }
 }
 
 .about__item {
-  margin-bottom: 32px;
+  margin-bottom: 31px;
 
   &:last-child {
-    margin-bottom: 41px;
+    margin-bottom: 40px;
   }
 }
 
@@ -67,7 +66,7 @@
   font-family: @font-bold;
   font-size: 18px;
   line-height: 24px;
-  padding-bottom: 11px;
+  padding-bottom: 12px;
 }
 
 

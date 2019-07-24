@@ -15,7 +15,7 @@
 <header class="page-header">
   <!--page-header__navigation-full для навигации без JS-->
   <nav class="page-header__navigation page-header__navigation--full" aria-label="Основная навигация">
-    <a class="page-header__logotype" alt="Логотип Pink">
+    <a class="page-header__logotype">
       <svg class="page-header__icon page-header__icon--mobile" width="75" height="22">
         <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
       </svg>
@@ -122,99 +122,108 @@
     <input class="sr-only slider__2" type="radio" id="review-2" name="review-toggle">
     <input class="sr-only slider__3" type="radio" id="review-3" name="review-toggle">
     <div class="reviews__toggles slider__toggles">
-      <label class="slider__toggle-1" for="review-1"></label>
-      <label class="slider__toggle-2" for="review-2"></label>
-      <label class="slider__toggle-3" for="review-3"></label>
+      <label class="slider__toggle slider__toggle--active" for="review-1"></label>
+      <label class="slider__toggle" for="review-2"></label>
+      <label class="slider__toggle" for="review-3"></label>
     </div>
     <div class="reviews__toggle">
       <button class="reviews__button reviews__button--prev" type="button">Предыдущий отзыв</button>
       <button class="reviews__button reviews__button--next" type="button">Следующий отзыв</button>
     </div>
-  </section><!--
-  <section class="price">
+  </section>
+  <section class="price slider">
     <h2 class="price__title sr-only">Выбор тарифного плана приложения</h2>
     <div class="price__wrap slider">
       <input class="sr-only slider__1 slider__1--price" type="radio" id="price-1" name="price-toggle">
       <input class="sr-only slider__2 slider__2--price" type="radio" id="price-2" name="price-toggle" checked>
       <input class="sr-only slider__3 slider__3--price" type="radio" id="price-3" name="price-toggle">
-      <div class="price__toggles slider__toggles">
-        <label class="slider__toggle-1" for="price-1"></label>
-        <label class="slider__toggle-2" for="price-2"></label>
-        <label class="slider__toggle-3" for="price-3"></label>
-      </div>
-      <table class="price__list slider__list">
-        <tr>
-          <th class="price__item"></th>
-          <th class="price__item">
-            <p class="price__name">База</p>
-            <p class="price__price">1,99 USD</p>
-          </th>
-          <th class="price__item">
-            <p class="price__name">Стандарт</p>
-            <p class="price__price">3,99 USD</p>
-          </th>
-          <th class="price__item">
-            <p class="price__name">Анлим</p>
-            <p class="price__price">9,99 USD</p>
-          </th>
-        </tr>
-        <tr class="price__filter">
-          <td class="price__option">Розовый фильтр</td>
-          <td class="price__option">
-            <span>Розовый фильтр</span>
-          </td>
-          <td class="price__option">
-            <span>Розовый фильтр</span>
-          </td>
-          <td class="price__option">
-            <span>Розовый фильтр</span>
-          </td>
-        </tr>
-        <tr class="price__smiley">
-          <td class="price__option">Смайлики</td>
-          <td class="price__option">
-            <span>Смайлики</span>
-          </td>
-          <td class="price__option">
-            <span>Смайлики</span>
-          </td>
-          <td class="price__option">
-            <span>Смайлики</span>
-          </td>
-        </tr>
-        <tr class="price__comments">
-          <td class="price__option">Комментарии</td>
-          <td class="price__option">
-            <span>Комментарии</span>
-          </td>
-          <td class="price__option">
-            <span>Комментарии</span>
-          </td>
-          <td class="price__option">
-            <span>Комментарии</span>
-          </td>
-        </tr>
+      <table class="price__list">
+        <thead class="price__list-head">
+          <tr class="price__header">
+            <th class="price__item price__item--empty"></th>
+            <th class="price__item">
+              <p class="price__heading">База</p>
+              <p class="price__price">1,99 USD</p>
+            </th>
+            <th class="price__item">
+              <p class="price__heading">Стандарт</p>
+              <p class="price__price">3,99 USD</p>
+            </th>
+            <th class="price__item">
+              <p class="price__heading">Анлим</p>
+              <p class="price__price">9,99 USD</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="price__list-body">
+          <tr class="price__filter">
+            <td class="price__option">Розовый фильтр</td>
+            <td class="price__option">
+              <span>Розовый фильтр</span>
+            </td>
+            <td class="price__option">
+              <span>Розовый фильтр</span>
+              <svg class="about__icon" width="31" height="21">
+                <use xlink:href="img/sprite.svg#icon-yes"></use>
+              </svg>
+            </td>
+            <td class="price__option">
+              <span>Розовый фильтр</span>
+            </td>
+          </tr>
+          <tr class="price__smiley">
+            <td class="price__option">Смайлики</td>
+            <td class="price__option">
+              <span>Смайлики</span>
+            </td>
+            <td class="price__option">
+              <span>Смайлики</span>
+            </td>
+            <td class="price__option">
+              <span>Смайлики</span>
+            </td>
+          </tr>
+          <tr class="price__comments">
+            <td class="price__option">Комментарии</td>
+            <td class="price__option">
+              <span>Комментарии</span>
+            </td>
+            <td class="price__option">
+              <span>Комментарии</span>
+            </td>
+            <td class="price__option">
+              <span>Комментарии</span>
+            </td>
+          </tr>
+        </tbody>
       </table>
+      <div class="price__toggles slider__toggles">
+        <label class="slider__toggle" for="price-1"></label>
+        <label class="slider__toggle slider__toggle--active" for="price-2"></label>
+        <label class="slider__toggle" for="price-3"></label>
+      </div>
     </div>
   </section>
   <section class="contacts">
-    <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
-    <ul class="contacts__list">
-      <li class="contacts__item">
-        <p class="contacts__text">Звоните:</p>
-        <a class="contacts__tel" href="tel:+78001000900" itemprop="telephone">8 (800) 1000 900</a>
-      </li>
-      <li class="contacts__item">
-        <p class="contacts__text">Звоните:</p>
-        <a class="contacts__email contacts__email" href="mailto:hello@pinkapp.ru" itemprop="email">hello@pinkapp.ru</a>
-      </li>
-      <li class="contacts__item">
-        <p class="contacts__text">Приезжайте в гости:</p>
-        <address class="contacts__address" itemprop="address">Санкт-Петербург, Невский проспект, д. 20</address>
-      </li>
-    </ul>
-    <div class="contacts__maps">
-      <img src="http://placehold.it/150x100" alt="Карта">
+    <div class="contacts__wrap">
+      <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <p class="contacts__subtitle">Звоните:</p>
+          <a class="contacts__tel" href="tel:+78125556666" itemprop="telephone">+7 (812) 555-66-66</a>
+        </li>
+        <li class="contacts__item">
+          <p class="contacts__subtitle">Пишите:</p>
+          <a class="contacts__email" href="mailto:mail@htmlacademy.ru" itemprop="email">mail@htmlacademy.ru</a>
+        </li>
+        <li class="contacts__item">
+          <p class="contacts__subtitle">Приезжайте в гости:</p>
+          <address class="contacts__address" itemprop="address">ул, Большая Конюшенная, 19/8</address>
+        </li>
+      </ul>
+    </div>
+    <div class="contacts__map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123688!2d30.320894615651014!3d59.93879686904841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1523735281602" allowfullscreen=""></iframe>
     </div>
   </section>
 </main>
@@ -223,7 +232,7 @@
     <h2 class="sr-only">Социальные сети</h2>
     <div class="page-footer__column">
       <a class="page-footer__link" href="#">
-        <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Pink">
+        <img class="page-footer__logo" src="#" width="128" height="24" alt="Логотип Pink">
       </a>
     </div>
     <div class="page-footer__column social">
@@ -263,7 +272,7 @@
       </a>
     </div>
   </section>
-</footer>-->
+</footer>
 <script src="js/script.min.js"></script>
 <script src="js/picturefill.min.js"></script>
 <script src="js/svgxuse.min.js"></script>
