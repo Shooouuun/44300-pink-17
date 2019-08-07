@@ -8,6 +8,9 @@
   <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <link rel="preload" href="fonts/opensanslight.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
   <meta name="keywords" content="Поднимает настроение, Меняет мир вокруг, Заводит новых друзей">
   <meta name="description" content="Сайт фотоприложения для раскрашивания серых будней">
 </head>
@@ -70,40 +73,40 @@
     </div>
     <ul class="about__list">
       <li class="about__item">
-        <picture class="about__product">
-          <img class="about__img" src="#" alt="Изображение поднимает настроение">
+        <picture class="about__product about__product--initial">
+          <img class="about__img" src="img/iphone-screen-1-desktop@1x.png" alt="Изображение поднимает настроение">
         </picture>
         <h3 class="about__item-title">Поднимает настроение</h3>
         <p class="about__descr">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
       </li>
       <li class="about__item">
-        <picture class="about__product">
-          <img class="about__descr" src="#" alt="Изображение поднимает настроение">
+        <picture class="about__product about__product--intermediary">
+          <img class="about__img" src="img/iphone-screen-2-desktop@1x.png" alt="Изображение поднимает настроение">
         </picture>
         <h3 class="about__item-title">Меняет мир вокруг</h3>
         <p class="about__descr">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
       </li>
       <li class="about__item">
-        <picture class="about__product">
-          <img class="about__img" src="#" alt="Изображение поднимает настроение">
+        <picture class="about__product about__product--result">
+          <img class="about__img" src="img/iphone-screen-3-desktop@1x.png" alt="Изображение поднимает настроение">
         </picture>
         <h3 class="about__item-title">Заводит новых друзей</h3>
         <p class="about__descr">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
       </li>
     </ul>
     <div class="about__research">
-      <svg class="about__icon" width="35" height="50" viewBox="2 0 67 101">
-        <use xlink:href="img/sprite.svg#icon"></use>
-      </svg>
-      <h2 class="about__research-title">Эффект на&nbsp;24&nbsp;часа!</h2>
+      <h2 class="about__research-title">Эффект<br>на 24 часа!</h2>
       <p class="about__research-descr">
-        Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от использования приложения длится&nbsp;целые&nbsp;сутки!
+        Британские ученые провели исследования и доказали, что положительный эффект<br>от использования приложения длится целые сутки!
       </p>
       <a class="about__research-link" href="#">Узнать больше об исследовании</a>
     </div>
   </section>
   <section class="reviews slider">
     <h2 class="reviews__title sr-only">Отзывы о приложении</h2>
+    <input class="sr-only slider__1" type="radio" id="review-radio-1" name="review-toggle" checked>
+    <input class="sr-only slider__2" type="radio" id="review-radio-2" name="review-toggle">
+    <input class="sr-only slider__3" type="radio" id="review-radio-3" name="review-toggle">
     <ul class="reviews__list slider__list">
       <li class="reviews__item slider__item">
         <cite class="reviews__author">Николай Петров</cite>
@@ -115,25 +118,18 @@
       <li class="reviews__item slider__item">
         <cite class="reviews__author">Владислав Петров</cite>
         <p class="reviews__description">25 лет, водитель трамвая</p>
-        <q class="reviews__comment">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-        </q>
+        <q class="reviews__comment">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!</q>
       </li>
       <li class="reviews__item slider__item">
         <cite class="reviews__author">Борис Петров</cite>
         <p class="reviews__description">25 лет, водитель трамвая</p>
-        <q class="reviews__comment">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-        </q>
+        <q class="reviews__comment">Это приложение перевернуло мой мир!</q>
       </li>
     </ul>
-    <input class="sr-only slider__1" type="radio" id="review-1" name="review-toggle" checked>
-    <input class="sr-only slider__2" type="radio" id="review-2" name="review-toggle">
-    <input class="sr-only slider__3" type="radio" id="review-3" name="review-toggle">
     <div class="reviews__toggles slider__toggles">
-      <label class="slider__toggle slider__toggle--active" for="review-1"></label>
-      <label class="slider__toggle" for="review-2"></label>
-      <label class="slider__toggle" for="review-3"></label>
+      <label class="slider__toggle" for="review-radio-1"></label>
+      <label class="slider__toggle" for="review-radio-2"></label>
+      <label class="slider__toggle" for="review-radio-3"></label>
     </div>
     <div class="reviews__toggle">
       <button class="reviews__button reviews__button--prev" type="button">Предыдущий отзыв</button>
@@ -143,9 +139,9 @@
   <section class="price slider">
     <h2 class="price__title sr-only">Выбор тарифного плана приложения</h2>
     <div class="price__wrap slider">
-      <input class="sr-only slider__1 slider__1--price" type="radio" id="price-1" name="price-toggle">
-      <input class="sr-only slider__2 slider__2--price" type="radio" id="price-2" name="price-toggle" checked>
-      <input class="sr-only slider__3 slider__3--price" type="radio" id="price-3" name="price-toggle">
+      <input class="sr-only slider__1 slider__1--price" type="radio" id="price-radio-1" name="price-toggle">
+      <input class="sr-only slider__2 slider__2--price" type="radio" id="price-radio-2" name="price-toggle" checked>
+      <input class="sr-only slider__3 slider__3--price" type="radio" id="price-radio-3" name="price-toggle">
       <table class="price__list">
         <thead class="price__list-head">
           <tr class="price__header">
@@ -172,9 +168,6 @@
             </td>
             <td class="price__option">
               <span>Розовый фильтр</span>
-              <svg class="about__icon" width="31" height="21">
-                <use xlink:href="img/sprite.svg#icon-yes"></use>
-              </svg>
             </td>
             <td class="price__option">
               <span>Розовый фильтр</span>
@@ -207,9 +200,9 @@
         </tbody>
       </table>
       <div class="price__toggles slider__toggles">
-        <label class="slider__toggle" for="price-1"></label>
-        <label class="slider__toggle slider__toggle--active" for="price-2"></label>
-        <label class="slider__toggle" for="price-3"></label>
+        <label class="slider__toggle" for="price-radio-1"></label>
+        <label class="slider__toggle" for="price-radio-2"></label>
+        <label class="slider__toggle" for="price-radio-3"></label>
       </div>
     </div>
   </section>
