@@ -6,3 +6,26 @@
   user-select: none;
 }
 
+.slider__toggles {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 56px;
+  margin: 36px auto 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 37px auto 0;
+  }
+
+  &--shutdown {
+    margin: 43px auto 0;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}

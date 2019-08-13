@@ -6,6 +6,14 @@
   @media (min-width: @tablet-width) {
     padding: 85px 0 24px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 185px 50px 40px;
+    background-image: url(../img/icon-quotes.svg);
+    background-size: 81px 64px;
+    background-repeat: no-repeat;
+    background-position: 442px 72px;
+  }
 }
 
 .reviews__list {
@@ -28,6 +36,10 @@
   flex-flow: column wrap;
   width: 100%;
   margin: 0 20px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 50px;
+  }
 }
 
 .reviews__author {
@@ -42,6 +54,10 @@
     margin-bottom: 3px;
     font-size: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
 }
 
 .reviews__description {
@@ -53,6 +69,11 @@
   @media (min-width: @tablet-width) {
     display: block;
     order: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 3;
+    font-size: 18px;
   }
 }
 
@@ -67,22 +88,37 @@
     margin-bottom: 34px;
     font-size: 18px;
   }
-}
 
-.slider__toggles {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 56px;
-  margin: 36px auto 0;
-
-  @media (min-width: @tablet-width) {
-    margin: 37px auto 0;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 36px;
   }
 }
 
-.reviews__toggle {
+.reviews__button {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    display: block;
+    width: 27px;
+    height: 41px;
+    top: 214px;
+    opacity: 0.3;
+  }
+
+  &--prev {
+    position: absolute;
+    background: url("../img/icon-review-arrow-left.svg") no-repeat;
+    background-size: 27px 41px;
+    left: 7px;
+  }
+
+  &--next {
+    position: absolute;
+    background: url("../img/icon-review-arrow-right.svg") no-repeat;
+    background-size: 27px 41px;
+    right: 7px;
+  }
 }
 
 #review-radio-1:checked ~ .reviews__list {
