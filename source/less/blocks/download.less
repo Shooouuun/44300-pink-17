@@ -1,7 +1,8 @@
 .download {
-  background: #1d2631 url(../img/bg-back-mobile@1x.jpg) no-repeat 0 0;
+  background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat 0 0;
   margin-top: -66px;
   background-size: 100% 462px;
+  overflow: hidden;
 
   &--short {
     background-size: 100% 461px;
@@ -9,7 +10,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: -110px;
-    background-image: url(../img/bg-back-tablet@1x.jpg);
+    background-image: url("../img/bg-back-tablet@1x.jpg");
     background-color: transparent;
     background-size: 1200px 729px;
     background-position: 50% 0;
@@ -20,20 +21,20 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url(../img/bg-back-desktop@1x.jpg);
+    background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: 2560px 853px;
     background-position: center 0;
   }
 }
 
 .download__wrap {
-  background: url(../img/iphone-hand-mobile@1x.png) no-repeat 0 176px;
-  padding: 490px 20px 30px;
+  background: url("../img/iphone-hand-mobile@1x.png") no-repeat 0 176px;
   width: 320px;
   margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
   text-align: center;
+  padding: 490px 20px 30px;
 
   &--short {
     padding-top: 489px;
@@ -45,19 +46,16 @@
   }
 
   @media (min-width: @tablet-width) {
-    background: url(../img/iphone-hand-tablet@1x.png) no-repeat 51% 184px;
+    background: url("../img/iphone-hand-tablet@1x.png") no-repeat 51% 184px;
     background-size: auto;
     width: 660px;
-    padding-top: 203px;
-    padding-bottom: 134px;
+    padding: 203px 20px 110px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 940px;
-    background: url(../img/iphone-hand-desktop@1x.png) no-repeat 16px 209px;
-    padding-top: 218px;
-    padding-bottom: 161px;
-    padding-left: 0;
+    background: url("../img/iphone-hand-desktop@1x.png") no-repeat 26px 209px;
+    padding: 218px 10px 122px 10px;
+    width: inherit;
   }
 }
 
@@ -130,20 +128,31 @@
   font-size: 0;
 
   &--apple {
-    background: url("../img/logo-apple.svg") no-repeat center;
-    background-size: 47px 56px;
+    background: url("../img/logo-apple.svg") no-repeat center 2px;
+    background-size: 48px 56px;
 
     @media (min-width: @tablet-width) {
       background-size: 51px 57px;
+      background-position: -2px 3px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-size: 52px 56px;
+      background-position: 0 2px;
     }
   }
 
   &--android {
     background: url("../img/logo-android.svg") no-repeat 3px 10px;
-    background-size: 43px 47px;
+    background-size: 42px 47px;
 
     @media (min-width: @tablet-width) {
       background-position: 4px 9px;
+      background-size: 42px 47px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-position: 4px 10px;
     }
   }
 
@@ -153,6 +162,11 @@
 
     @media (min-width: @tablet-width) {
       background-size: 44px 43px;
+      background-position: 1px 14px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-position: 4px 13px;
     }
   }
 }
