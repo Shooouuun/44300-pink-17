@@ -39,7 +39,7 @@
   border-spacing: 0;
   width: 300%;
   transform: translateX(0);
-  transition: .5s;
+  transition: 0.5s;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -102,7 +102,7 @@
       text-align: center;
       text-transform: uppercase;
       background-color: #d22856;
-      color: #fff;
+      color: #ffffff;
 
       @media (min-width: @tablet-width) {
         top: 4px;
@@ -125,7 +125,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -221,11 +221,11 @@
   }
 
   &--in-stock {
-    background: url(../img/icon-yes.svg) 93% 20px no-repeat;
+    background: url("../img/icon-yes.svg") 93% 20px no-repeat;
     background-size: 32px 21px;
 
     @media (min-width: @tablet-width) {
-      background: url(../img/icon-yes.svg) 50% 13px no-repeat;
+      background: url("../img/icon-yes.svg") 50% 13px no-repeat;
       background-size: 32px 21px;
     }
 
@@ -235,11 +235,11 @@
   }
 
   &--cancel {
-    background: url(../img/icon-no.svg) 92% 45% no-repeat;
+    background: url("../img/icon-no.svg") 92% 45% no-repeat;
     background-size: 27px 26px;
 
     @media (min-width: @tablet-width) {
-      background: url(../img/icon-no.svg) 50% 47% no-repeat;
+      background: url("../img/icon-no.svg") 50% 47% no-repeat;
       background-size: 29px 26px;
     }
   }
@@ -253,7 +253,7 @@
   margin: 43px auto 0;
 }
 
-#price-radio-1:checked ~ .price__list {
+.slider__1--price:checked ~ .price__list {
   transform: translateX(0);
 
   @media (min-width: @tablet-width) {
@@ -261,7 +261,7 @@
   }
 }
 
-#price-radio-2:checked ~ .price__list {
+.slider__2--price:checked ~ .price__list {
   transform: translateX(-33.5%);
 
   @media (min-width: @tablet-width) {
@@ -269,7 +269,7 @@
   }
 }
 
-#price-radio-3:checked ~ .price__list {
+.slider__3--price:checked ~ .price__list {
   transform: translateX(-66.5%);
 
   @media (min-width: @tablet-width) {
@@ -277,9 +277,9 @@
   }
 }
 
-#price-radio-1:checked ~ .slider__toggles label[for=price-radio-1],
-#price-radio-2:checked ~ .slider__toggles label[for=price-radio-2],
-#price-radio-3:checked ~ .slider__toggles label[for=price-radio-3] {
-  background: #fff;
+.slider__1--price:checked ~ .slider__toggles label[for="price-radio-1"],
+.slider__2--price:checked ~ .slider__toggles label[for="price-radio-2"],
+.slider__3--price:checked ~ .slider__toggles label[for="price-radio-3"] {
+  background: #ffffff;
   box-shadow: 0 0 0 3px #283645;
 }

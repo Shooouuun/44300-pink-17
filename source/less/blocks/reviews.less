@@ -9,7 +9,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 185px 50px 40px;
-    background-image: url(../img/icon-quotes.svg);
+    background-image: url("../img/icon-quotes.svg");
     background-size: 81px 64px;
     background-repeat: no-repeat;
     background-position: 442px 72px;
@@ -121,21 +121,21 @@
   }
 }
 
-#review-radio-1:checked ~ .reviews__list {
+.slider__1--reviews:checked ~ .reviews__list {
   transform: translateX(0%);
 }
 
-#review-radio-2:checked ~ .reviews__list {
+.slider__2--reviews:checked ~ .reviews__list {
   transform: translateX(-33%);
 }
 
-#review-radio-3:checked ~ .reviews__list{
+.slider__3--reviews:checked ~ .reviews__list {
   transform: translateX(-66%);
 }
 
-#review-radio-1:checked ~ .slider__toggles label[for=review-radio-1],
-#review-radio-2:checked ~ .slider__toggles label[for=review-radio-2],
-#review-radio-3:checked ~ .slider__toggles label[for=review-radio-3] {
-  background: #fff;
+.slider__1--reviews:checked ~ .slider__toggles label[for="review-radio-1"],
+.slider__2--reviews:checked ~ .slider__toggles label[for="review-radio-2"],
+.slider__3--reviews:checked ~ .slider__toggles label[for="review-radio-3"] {
+  background: #ffffff;
   box-shadow: 0 0 0 3px #283645;
 }
