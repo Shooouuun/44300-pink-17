@@ -8,9 +8,9 @@
   <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <link rel="preload" href="fonts/opensanslight.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/jpg" href="img/favicon-96x96.jpg" sizes="96x96">
+  <link rel="icon" type="image/jpg" href="img/favicon-32x32.jpg" sizes="32x32">
+  <link rel="icon" type="image/jpg" href="img/favicon-16x16.jpg" sizes="16x16">
   <meta name="keywords" content="Фотографии пользователей">
   <meta name="description" content="Взгляните на фотографии, которые выкладывают пользователи">
 </head>
@@ -21,143 +21,146 @@
 <header class="page-header">
   <!--page-header__navigation-full для навигации без JS-->
   <nav class="page-header__navigation page-header__navigation--full" aria-label="Основная навигация">
-    <div class="page-header__wrap container">
-      <a class="page-header__logotype" aria-label="Логотип сайта Pink">
-        <svg class="page-header__icon page-header__icon-logo--mobile" width="75" height="22">
+    <div class="page-header__wrap">
+      <a class="page-header__logotype" href="index.html" aria-label="Логотип сайта Pink">
+        <svg class="page-header__logo page-header__logo--mobile" width="75" height="22">
           <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
         </svg>
-        <svg class="page-header__icon page-header__icon-logo--tablet" width="148" height="40">
+        <svg class="page-header__logo page-header__logo--tablet" width="148" height="40">
           <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
         </svg>
-        <svg class="page-header__icon page-header__icon-logo--desktop" width="148" height="40">
+        <svg class="page-header__logo page-header__logo--desktop" width="148" height="40">
           <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
         </svg>
       </a>
       <!--header__trigger-nojs для переключателя без JS-->
       <button class="page-header__trigger page-header__trigger--nojs" type="button" title="Переключатель открытия/закрытия навигации">
-          <span class="page-header__trigger-name">Навигация</span>
+        <span class="page-header__trigger-name">Навигация</span>
       </button>
       <!--page-header__list-open для навигации без JS-->
       <ul class="page-header__list page-header__list--nojs">
-        <li class="page-header__item"><a class="page-header__link page-header__link--active" href="index.html">Главная</a></li>
-        <li class="page-header__item"><a class="page-header__link" href="#">Фотографии</a></li>
+        <li class="page-header__item"><a class="page-header__link" href="index.html">Главная</a></li>
+        <li class="page-header__item"><a class="page-header__link page-header__link--active" href="#">Фотографии</a></li>
         <li class="page-header__item"><a class="page-header__link" href="form.html">Конкурс</a></li>
         <li class="page-header__item"><a class="page-header__link" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
       </ul>
     </div>
   </nav>
-  <section class="page-header__intro">
-    <div class="intro__intro-wrap">
-      <h1 class="intro__title intro__title--index intro__title--toggle">фотографии пользователей</h1>
-    </div>
+  <section class="page-header__wrapper-title">
+    <h1 class="page-header__title">Фотографии пользователей</h1>
   </section>
 </header>
 <main class="page-main">
-  <section class="photo-section">
-    <div class="photo-section__title-wrap">
-      <h2 class="photo-section__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+  <section class="photo">
+    <div class="photo-section__slogan-wrap">
+      <h2 class="photo-section__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
     </div>
-    <article class="photo-section__user-photo photo-section__user-photo--of-the-day">
-      <picture class="photo-section__image photo-section__image--of-the-day">
-        <!-- <p class="photo-section__view-of-the-day">панорама дня</p> будет реализовано псевдоэлементов, content: 'панорама дня'; -->
-        <img class="photo-section__img" src="#" alt="Фотография панорамы дня">
-      </picture>
-      <div class="photo-section__caption photo-section__caption--wrapper">
-        <cite class="photo-section__post-autor">Анна<span>(5 минут назад)</span></cite>
-        <p class="photo-section__post-likes photo-section__post-likes--panoram">Нравится:<span class="photo-section__counter-like">215</span></p>
-        <p class="photo-section__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
-      </div>
-    </article>
     <section class="photo-section__post-wrap">
       <ul class="photo-section__list">
-        <li class="photo-section__item">
+        <li class="photo-section__item photo-section__item--of-the-day">
+          <div class="photo-section__view-of-the-day">Панорама дня</div>
           <picture class="photo-section__image">
-            <img class="photo-section__img" src="#" alt="Фотография">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+            <img class="photo-section__img photo-section__img--of-the-day" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Фотография панорамы дня">
           </picture>
-          <div class="photo-section__caption photo-section__caption--wrapper">
-            <cite class="photo-section__post-autor">Левон<span>(5 часов назад)</span></cite>
-            <p class="photo-section__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <div class="photo-section__post-likes">
-              <svg class="photo-section__icon" width="12" height="12">
-                <use xlink:href="img/sprite.svg#icon"></use>
-              </svg>
-              <p class="photo-section__likes">Нравится:<span class="photo-section__counter-like">356</span></p>
-            </div>
+          <div class="photo-section__caption photo-section__caption--of-the-day">
+            <cite class="photo-section__post-autor photo-section__post-autor--of-the-day">Анна<span>(5 минут назад)</span></cite>
+            <p class="photo-section__comment photo-section__comment--of-the-day">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
+            <p class="photo-section__likes photo-section__likes--of-the-day">Нравится:<span class="photo-section__counter-like">215</span></p>
           </div>
         </li>
         <li class="photo-section__item">
           <picture class="photo-section__image">
-            <img class="photo-section__img" src="#" alt="Фотография">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+            <img class="photo-section__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фотография">
           </picture>
-          <div class="photo-section__caption photo-section__caption--wrapper">
+          <div class="photo-section__caption">
+            <cite class="photo-section__post-autor">Левон<span>(5 часов назад)</span></cite>
+            <p class="photo-section__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <p class="photo-section__likes">Нравится:<span class="photo-section__counter-like">356</span></p>
+          </div>
+        </li>
+        <li class="photo-section__item">
+          <picture class="photo-section__image">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+            <img class="photo-section__img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фотография">
+          </picture>
+          <div class="photo-section__caption">
             <cite class="photo-section__post-autor">Антон<span>(12 часов назад)</span></cite>
             <p class="photo-section__comment">Соседи будут рады!</p>
-            <div class="photo-section__post-likes">
-              <svg class="photo-section__icon" width="12" height="12">
-                <use xlink:href="img/sprite.svg#icon"></use>
-              </svg>
-              <p class="photo-section__likes">Нравится:<span class="photo-section__counter-like">666</span></p>
-            </div>
+            <p class="photo-section__likes">Нравится:<span class="photo-section__counter-like">666</span></p>
           </div>
         </li>
         <li class="photo-section__item">
           <picture class="photo-section__image">
-            <img class="photo-section__img" src="#" alt="Фотография">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+            <img class="photo-section__img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фотография">
           </picture>
-          <div class="photo-section__caption photo-section__caption--wrapper">
+          <div class="photo-section__caption">
             <cite class="photo-section__post-autor">Борис<span>(20 часов назад)</span></cite>
             <p class="photo-section__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <div class="photo-section__post-likes">
-              <svg class="photo-section__icon" width="12" height="12">
-                <use xlink:href="img/sprite.svg#icon"></use>
-              </svg>
-              <p class="photo-section__likes">Нравится:<span class="photo-section__counter-like">215</span></p>
-            </div>
+            <p class="photo-section__likes">Нравится:<span class="photo-section__counter-like">215</span></p>
           </div>
         </li>
         <li class="photo-section__item">
           <picture class="photo-section__image">
-            <img class="photo-section__img" src="#" alt="Фотография">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+            <img class="photo-section__img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Фотография">
           </picture>
-          <div class="photo-section__caption photo-section__caption--wrapper">
+          <div class="photo-section__caption">
             <cite class="photo-section__post-autor">Сергей<span>(25 часов назад)</span></cite>
-            <p class="photo-section__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <div class="photo-section__post-likes">
-              <svg class="photo-section__icon" width="12" height="12">
-                <use xlink:href="img/sprite.svg#icon"></use>
-              </svg>
-              <p class="photo-section__likes">Нравится:<span class="photo-section__counter-like">4</span></p>
-            </div>
+            <p class="photo-section__comment">Самая кубанская в мире!</p>
+            <p class="photo-section__likes">Нравится:<span class="photo-section__counter-like">4</span></p>
           </div>
         </li>
         <li class="photo-section__item">
           <picture class="photo-section__image">
-            <img class="photo-section__img" src="#" alt="Фотография">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+            <img class="photo-section__img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Фотография">
           </picture>
-          <div class="photo-section__caption photo-section__caption--wrapper">
+          <div class="photo-section__caption">
             <cite class="photo-section__post-autor">Максим<span>(40 часов назад)</span></cite>
-            <p class="photo-section__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <div class="photo-section__post-likes">
-              <svg class="photo-section__icon" width="12" height="12">
-                <use xlink:href="img/sprite.svg#icon"></use>
-              </svg>
-              <p class="photo-section__likes">Нравится:<span class="photo-section__counter-like">150</span></p>
-            </div>
+            <p class="photo-section__comment">Где снег-то?</p>
+            <p class="photo-section__likes">Нравится:<span class="photo-section__counter-like">150</span></p>
           </div>
         </li>
         <li class="photo-section__item">
           <picture class="photo-section__image">
-            <img class="photo-section__img" src="#" alt="Фотография">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+            <img class="photo-section__img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Фотография">
           </picture>
-          <div class="photo-section__caption photo-section__caption--wrapper">
+          <div class="photo-section__caption">
             <cite class="photo-section__post-autor">Надежда<span>(45 часов назад)</span></cite>
-            <p class="photo-section__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <div class="photo-section__post-likes">
-              <svg class="photo-section__icon" width="12" height="12">
-                <use xlink:href="img/sprite.svg#icon"></use>
-              </svg>
-              <p class="photo-section__likes">Нравится:<span class="photo-section__counter-like">2560</span></p>
-            </div>
+            <p class="photo-section__comment">Всем GM и взаимные лайки!</p>
+            <p class="photo-section__likes">Нравится:<span class="photo-section__counter-like">2560</span></p>
           </div>
         </li>
       </ul>
@@ -165,71 +168,106 @@
   </section>
   <section class="upload">
     <h2 class="upload__title">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</h2>
-    <div class="upload__photo">
+    <section class="upload__photo">
       <h3 class="sr-only">Обработка и загрузка вашей фотографии</h3>
-      <picture>
-        <img class="upload__image" src="#" alt="Ваше фото">
+      <picture class="upload__picture">
+        <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
+        <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+        <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+        <img class="upload__image" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Ваше фото">
       </picture>
       <div class="upload__tools">
-        <ul class="upload__list">
-          <li class="upload__item upload__item--crop">
-            <button class="upload__tools-button upload__tools-button--crop" type="button">Обрезать
-              <svg class="upload__tools-icon upload__tools-icon--crop" width="48" height="48">
-                <use xlink:href="#spr-icon-editor-crop"></use>
-              </svg>
-            </button>
-          </li>
-          <li class="upload__item upload__item--fill">
-            <button class="upload__tools-button upload__tools-button--fill" type="button">Залить
-              <svg class="upload__tools-icon upload__tools-icon--fill" width="48" height="48">
-                <use xlink:href="#spr-icon-editor-fill"></use>
-              </svg>
-            </button>
-          </li>
-          <li class="upload__item upload__item--contrast">
-            <button class="upload__tools-button upload__tools-button--contrast" type="button">Контраст
-              <svg class="upload__tools-icon upload__tools-icon--contrast" width="31.92" height="31.92">
-                <use xlink:href="#spr-icon-editor-contrast"></use>
-              </svg>
-            </button>
-          </li>
-        </ul>
-        <button class="upload__button upload__button--post" type="submit">Запостить</button>
-        <button class="upload__button upload__button--cancel" type="reset">Отмена</button>
+        <div class="upload__tools-wrap">
+          <ul class="upload__list">
+            <li class="upload__item upload__item--crop">
+              <button class="upload__tools-button upload__tools-button--crop" type="button">Обрезать
+                <svg class="upload__tools-icon upload__tools-icon--crop" width="48" height="48">
+                  <use xlink:href="img/sprite.svg#icon-editor-crop"></use>
+                </svg>
+              </button>
+              <div class="upload__control upload__control--crop">
+                <div class="upload__range upload__range--crop">
+                  <div class="upload__range-scale"></div>
+                  <div class="uload__range-btn"></div>
+                </div>
+              </div>
+            </li>
+            <li class="upload__item upload__item--fill">
+              <button class="upload__tools-button upload__tools-button--fill" type="button">Залить
+                <svg class="upload__tools-icon upload__tools-icon--fill" width="48" height="48">
+                  <use xlink:href="img/sprite.svg#icon-editor-fill"></use>
+                </svg>
+              </button>
+              <div class="upload__control upload__control--fill">
+                <div class="upload__range upload__range--fill">
+                  <div class="upload__range-scale"></div>
+                  <div class="uload__range-btn"></div>
+                </div>
+              </div>
+            </li>
+            <li class="upload__item upload__item--contrast">
+              <button class="upload__tools-button upload__tools-button--contrast" type="button">Контраст
+                <svg class="upload__tools-icon upload__tools-icon--contrast" width="31.92" height="31.92">
+                  <use xlink:href="img/sprite.svg#icon-editor-contrast"></use>
+                </svg>
+              </button>
+              <div class="upload__control upload__control--contrast">
+                <div class="upload__range upload__range--contrast">
+                  <div class="upload__range-scale"></div>
+                  <div class="uload__range-btn"></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="upload__button-wrap">
+          <button class="upload__button upload__button--post" type="submit">Запостить</button>
+          <button class="upload__button upload__button--cancel" type="reset">Отмена</button>
+        </div>
       </div>
-    </div>
+    </section>
   </section>
 </main>
 <footer class="page-footer">
-  <section class="page-footer__wrapper">
+  <section class="page-footer__wrapper container">
     <h2 class="sr-only">Социальные сети</h2>
     <div class="page-footer__column">
-      <a class="page-footer__link" href="index.html" aria-label="На главную">
-        <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Pink">
+      <a class="page-footer__logotype" aria-label="Логотип сайта Pink">
+        <svg class="page-footer__logo page-footer__logo--mobile" width="148" height="40">
+          <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+        </svg>
+        <svg class="page-footer__logo page-footer__logo--tablet" width="148" height="40">
+          <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+        </svg>
+        <svg class="page-footer__logo page-footer__logo--desktop" width="148" height="40">
+          <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
+        </svg>
       </a>
     </div>
     <div class="page-footer__column social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link" href="https://twitter.com" target="_blank">
-            <svg class="social__icon social__twitter" width="22" height="12">
-              <use xlink:href="img/sprite.svg#icon-twitter-mobile"></use>
+          <a class="social__link" href="https://twitter.com" target="_blank" rel="noopener">
+            <svg class="social__icon social__icon--twitter" width="19" height="15">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
             <span class="sr-only">Мы в Твиттере</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="https://facebook.com" target="_blank">
-            <svg class="social__icon social__facebook" width="10" height="19">
-              <use xlink:href="img/sprite.svg#icon-fb-mobile"></use>
+          <a class="social__link" href="https://facebook.com" target="_blank" rel="noopener">
+            <svg class="social__icon social__icon--facebook" width="9" height="19">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
             </svg>
             <span class="sr-only">Мы в Фейсбуке</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link" href="https://www.youtube.com" target="_blank">
-            <svg class="social__icon social__instagram" width="16" height="16">
-              <use xlink:href="img/sprite.svg#icon-youtube-mobile"></use>
+          <a class="social__link" href="https://www.youtube.com" target="_blank" rel="noopener">
+            <svg class="social__icon social__icon--youtube" width="15" height="14">
+              <use xlink:href="img/sprite.svg#icon-youtube"></use>
             </svg>
             <span class="sr-only">Мы на Ютубе</span>
           </a>
@@ -237,10 +275,10 @@
       </ul>
     </div>
     <div class="page-footer__column copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <p class="copyright__text">HTML Academy</p>
-        <svg class="copyright__image" width="40" height="40">
-          <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener">
+        <p class="copyright__text">Разработано</p>
+        <svg class="copyright__image" width="27" height="34">
+          <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
         </svg>
       </a>
     </div>

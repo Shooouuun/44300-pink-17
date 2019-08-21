@@ -1,5 +1,9 @@
 .page-footer {
-  display: none;
+  position: relative;
+
+  &--state {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -7,6 +11,11 @@
 }
 
 .page-footer__wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 40px 20px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-flow: row wrap;
@@ -20,6 +29,16 @@
 }
 
 .page-footer__logo {
+  &--mobile {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
   &--tablet {
     display: none;
 
@@ -34,6 +53,10 @@
 
   &--desktop {
     display: none;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
 
     @media (min-width: @desktop-width) {
       display: block;
